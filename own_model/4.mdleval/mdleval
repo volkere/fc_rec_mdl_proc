@@ -1,0 +1,2 @@
+loss, mae = model.evaluate(X_test, y_test)
+print(f"Mean Absolute Error (MAE): {mae}")

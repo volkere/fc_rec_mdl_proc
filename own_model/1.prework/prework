@@ -1,0 +1,19 @@
+import cv2
+from mtcnn import MTCNN
+
+def preprocess_image(image_path, target_size=(224, 224)):
+    # Gesichtserkennung mit MTCNN
+    detector = MTCNN()
+    image = cv2.cvtColor(cv2.imread(image_path), cv2.COLOR_BGR2RGB)
+    faces = detector.detect_faces(image)
+
+    if len(faces) > 0:
+        # Extrahiere das größte Gesicht
+        x, y, width, height = faces[0]['box']
+        face = image[y:y+height, x:x+width]
+
+        # Skaliere das Gesicht auf die Zielgröße
+        face = cv2.resize(face, target_size)
+        return face
+    else:
+        return None

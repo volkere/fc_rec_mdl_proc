@@ -1,0 +1,9 @@
+from tensorflow.keras.models import load_model
+
+# Modell laden
+model = load_model("age_detection_model.h5")
+
+# Vorhersage für ein neues Bild
+new_image = preprocess_image("pfad/zum/neuen_bild.jpg")
+predicted_age = model.predict(np.expand_dims(new_image, axis=0))[0][0]
+print(f"Geschätztes Alter: {predicted_age} Jahre")
