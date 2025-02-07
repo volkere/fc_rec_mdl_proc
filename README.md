@@ -1,8 +1,8 @@
-# 📌 Gesichtserkennung & Altersschätzung mit KI
+# Gesichtserkennung & Altersschätzung mit KI
 
 Dieses Projekt nutzt **dlib**, **OpenCV** und **TensorFlow**, um Gesichter aus Bildern zu erkennen und ihr Alter vorherzusagen. Die erkannten Gesichter werden sortiert und in einem Ausgabeordner gespeichert.
 
-## 🚀 Features
+## Features
 - **Gesichtserkennung** mit `dlib`
 - **Altersschätzung** mit einem trainierten `TensorFlow`-Modell
 - **Automatische Sortierung** der Gesichter nach geschätztem Alter
@@ -10,7 +10,7 @@ Dieses Projekt nutzt **dlib**, **OpenCV** und **TensorFlow**, um Gesichter aus B
 
 ---
 
-## 📂 Verzeichnisstruktur
+## Verzeichnisstruktur
 ```
 project_root/
 │-- analog_portraits/    # Eingangsordner mit Bildern
@@ -23,8 +23,8 @@ project_root/
 
 ---
 
-## 🛠 Installation
-### 1️⃣ **Erforderliche Abhängigkeiten installieren**
+## Installation
+### **Erforderliche Abhängigkeiten installieren**
 ```sh
 pip install opencv-python dlib tensorflow numpy
 ```
@@ -37,7 +37,7 @@ Für Apple Silicon (`M1/M2/M3`):
 brew install dlib
 ```
 
-### 2️⃣ **Projektstruktur einrichten**
+### **Projektstruktur einrichten**
 Erstelle die Eingangs- und Ausgangsordner:
 ```sh
 mkdir analog_portraits sorted_faces
@@ -45,15 +45,15 @@ mkdir analog_portraits sorted_faces
 
 ---
 
-## 📌 Nutzung
-### **1️⃣ Gesichter erkennen & Alter schätzen**
+## Nutzung
+### Gesichter erkennen & Alter schätzen**
 Lege deine Bilder in `analog_portraits/` ab und starte das Skript:
 ```sh
 python allto1.py
 ```
 Erkannte Gesichter werden im `sorted_faces/` Ordner gespeichert.
 
-### **2️⃣ Neues Modell trainieren (optional)**
+### Neues Modell trainieren (optional)**
 Falls du ein neues Modell trainieren möchtest:
 ```sh
 python train_model.py
