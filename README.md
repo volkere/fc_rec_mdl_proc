@@ -60,42 +60,17 @@ python train_model.py
 ```
 Nach dem Training wird das Modell als `age_model.keras` gespeichert.
 
----
-
-## ⚠️ Fehlerbehebung
-### ❌ `AttributeError: module 'dlib' has no attribute 'get_frontal_face_detector'`
-**Lösung:** Stelle sicher, dass `dlib` korrekt installiert ist:
-```sh
-pip install --no-cache-dir dlib
-```
-
-### ❌ `cv2.error: (-215:Assertion failed) !ssize.empty()`
-**Lösung:** Überprüfe, ob Gesichter erkannt wurden. Falls nicht, stelle sicher, dass das Bild geladen wird.
-```python
-image = cv2.imread(image_path)
-if image is None:
-    print("Fehler: Bild konnte nicht geladen werden!")
-```
-
-### ❌ `ValueError: File not found: age_model.keras`
-**Lösung:** Trainiere das Modell neu:
-```sh
-python train_model.py
-```
-
----
-
-## 📜 Lizenz
+## Lizenz
 MIT License
 
 ---
 
-## 🤝 Mitwirkende
+## Mitwirkende
 - **@blaubaer** – Hauptentwickler
 - **Contributors willkommen!** Stelle gerne Pull-Requests mit Verbesserungen ein.
 
 ---
 
-## 🌟 Unterstützung
+## Unterstützung
 Wenn dir das Projekt gefällt, ⭐️ es auf GitHub! 😊
 
